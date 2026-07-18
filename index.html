@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chase Grant</title>
+<meta name="description" content="Chase Grant — personal site.">
+<style>
+  :root {
+    --ink: #17181a;
+    --muted: #6b6f76;
+    --line: #e8e8e6;
+    --bg: #fcfcfb;
+    --accent: #2f5d3a;
+    --maxw: 680px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  header {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0;
+    background: rgba(252,252,251,0.92);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; }
+  .nav .logo { font-weight: 650; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); font-size: 17px; }
+  .nav ul { display: flex; gap: 28px; list-style: none; }
+  .nav a { text-decoration: none; color: var(--muted); font-size: 14.5px; transition: color .15s ease; }
+  .nav a:hover { color: var(--ink); }
+
+  .hero { padding: 110px 0 90px; }
+  .hero h1 {
+    font-size: clamp(34px, 6vw, 52px);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  .hero p.tagline {
+    margin-top: 22px;
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 520px;
+  }
+  .hero .cta { margin-top: 36px; display: flex; gap: 14px; }
+  .btn {
+    display: inline-block;
+    padding: 11px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 550;
+    transition: opacity .15s ease, background .15s ease;
+  }
+  .btn.primary { background: var(--ink); color: #fff; }
+  .btn.primary:hover { opacity: .85; }
+  .btn.ghost { border: 1px solid var(--line); color: var(--ink); }
+  .btn.ghost:hover { background: #f2f2f0; }
+
+  section { padding: 70px 0; border-top: 1px solid var(--line); }
+  .kicker {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 650;
+    margin-bottom: 18px;
+  }
+  h2 { font-size: 26px; letter-spacing: -0.02em; margin-bottom: 18px; }
+  .about p { color: #3a3d42; margin-bottom: 16px; max-width: 600px; }
+
+  .projects { display: grid; gap: 18px; margin-top: 8px; }
+  .project {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 26px;
+    background: #fff;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .project:hover { border-color: #c9c9c5; transform: translateY(-2px); }
+  .project h3 { font-size: 17px; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .project p { color: var(--muted); font-size: 15px; }
+  .project a { color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 550; }
+  .project a:hover { text-decoration: underline; }
+  .project .link-row { margin-top: 12px; }
+
+  .contact p { color: #3a3d42; max-width: 560px; margin-bottom: 26px; }
+  .contact .email {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .socials { margin-top: 30px; display: flex; gap: 22px; }
+  .socials a { color: var(--muted); text-decoration: none; font-size: 15px; }
+  .socials a:hover { color: var(--ink); }
+
+  footer {
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 560px) {
+    .nav ul { gap: 18px; }
+    .hero { padding: 80px 0 60px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">Chase Grant</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Chase Grant</h1>
+    <p class="tagline">I build things, grow businesses, and enjoy the work. This is my corner of the internet.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See my work</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="kicker">About</div>
+      <h2>A little background</h2>
+      <p>I'm Chase — an entrepreneur and builder. I spend my time creating projects, growing ideas into real businesses, and learning by doing.</p>
+      <p>Away from work, you'll usually find me outside or planning the next thing.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="kicker">Work</div>
+      <h2>Selected projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Project One</h3>
+          <p>A short description of what this project is, who it's for, and what makes it interesting.</p>
+          <div class="link-row"><a href="#">View project &rarr;</a></div>
+        </div>
+        <div class="project">
+          <h3>Project Two</h3>
+          <p>A short description of what this project is, who it's for, and what makes it interesting.</p>
+          <div class="link-row"><a href="#">View project &rarr;</a></div>
+        </div>
+        <div class="project">
+          <h3>Project Three</h3>
+          <p>A short description of what this project is, who it's for, and what makes it interesting.</p>
+          <div class="link-row"><a href="#">View project &rarr;</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="kicker">Contact</div>
+      <h2>Say hello</h2>
+      <p>The best way to reach me is email. I read everything.</p>
+      <a class="email" href="mailto:hello@chasegrant.com">hello@chasegrant.com</a>
+      <div class="socials">
+        <a href="#" rel="me">X / Twitter</a>
+        <a href="#" rel="me">LinkedIn</a>
+        <a href="#" rel="me">Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr"></span> Chase Grant</div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
