@@ -3,16 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chase Grant</title>
-<meta name="description" content="Chase Grant — personal site.">
+
+<title>Chase Grant — Lawn Care Business Owner &amp; Founder of Grow Landscaping</title>
+<meta name="description" content="Chase Grant is a lawn care business owner, landscaping entrepreneur, and content creator building Grow Landscaping in Trinity, Florida into one of the top 100 landscaping companies in the world — and documenting every step of the journey.">
+<link rel="canonical" href="https://chasegrant.com/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Chase Grant">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Chase Grant — Lawn Care Business Owner &amp; Founder of Grow Landscaping">
+<meta property="og:description" content="Building Grow Landscaping into a top 100 landscaping company in the world, and showing the ins and outs of growing a lawn care business.">
+<meta property="og:url" content="https://chasegrant.com/">
+<meta property="og:image" content="https://chasegrant.com/chase-grant.jpg">
+<meta property="og:site_name" content="Chase Grant">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thechasegrant">
+<meta name="twitter:creator" content="@thechasegrant">
+<meta name="twitter:title" content="Chase Grant — Lawn Care Business Owner &amp; Founder of Grow Landscaping">
+<meta name="twitter:description" content="Building Grow Landscaping into a top 100 landscaping company in the world, and showing the ins and outs of growing a lawn care business.">
+<meta name="twitter:image" content="https://chasegrant.com/chase-grant.jpg">
+
+<!-- Structured data: Person + Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://chasegrant.com/#person",
+      "name": "Chase Grant",
+      "url": "https://chasegrant.com/",
+      "image": "https://chasegrant.com/chase-grant.jpg",
+      "jobTitle": "Founder",
+      "description": "Chase Grant is a lawn care business owner, landscaping entrepreneur, and content creator. He is the founder of Grow Landscaping in Trinity, Florida, which he is building into one of the top 100 landscaping companies in the world while documenting the process to help others grow their own lawn care businesses.",
+      "worksFor": { "@id": "https://chasegrant.com/#organization" },
+      "knowsAbout": ["Lawn care", "Landscaping", "Small business growth", "Entrepreneurship", "Content creation"],
+      "sameAs": [
+        "https://www.youtube.com/@chasegrant",
+        "https://www.instagram.com/thechasegrant",
+        "https://x.com/thechasegrant",
+        "https://growlandscapingservices.com/"
+      ]
+    },
+    {
+      "@type": "LandscapingBusiness",
+      "@id": "https://chasegrant.com/#organization",
+      "name": "Grow Landscaping",
+      "url": "https://growlandscapingservices.com/",
+      "founder": { "@id": "https://chasegrant.com/#person" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8477 Houndstooth Enclave Dr",
+        "addressLocality": "Trinity",
+        "addressRegion": "FL",
+        "postalCode": "34655",
+        "addressCountry": "US"
+      },
+      "hasMap": "https://www.google.com/maps?q=Grow+Landscaping,+8477+Houndstooth+Enclave+Dr,+Trinity,+FL+34655",
+      "areaServed": "Trinity, Florida and the greater Tampa Bay area"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://chasegrant.com/#website",
+      "url": "https://chasegrant.com/",
+      "name": "Chase Grant",
+      "publisher": { "@id": "https://chasegrant.com/#person" }
+    }
+  ]
+}
+</script>
+
 <style>
   :root {
-    --ink: #17181a;
-    --muted: #6b6f76;
-    --line: #e8e8e6;
-    --bg: #fcfcfb;
-    --accent: #2f5d3a;
-    --maxw: 680px;
+    --bg: #0d0f0e;
+    --card: #151817;
+    --ink: #f4f5f4;
+    --muted: #9aa19d;
+    --line: #262b29;
+    --accent: #3ddc84;
+    --accent-dim: #2a9c5e;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -20,180 +92,128 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: var(--bg);
     color: var(--ink);
-    line-height: 1.65;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 0 22px; }
 
-  header {
-    padding: 28px 0;
-    border-bottom: 1px solid var(--line);
-    position: sticky; top: 0;
-    background: rgba(252,252,251,0.92);
-    backdrop-filter: blur(8px);
-    z-index: 10;
+  .hero { padding: 64px 0 40px; text-align: center; }
+  .avatar {
+    width: 132px; height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    display: block;
+    margin: 0 auto 22px;
+    background: var(--card);
   }
-  .nav { display: flex; align-items: center; justify-content: space-between; }
-  .nav .logo { font-weight: 650; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); font-size: 17px; }
-  .nav ul { display: flex; gap: 28px; list-style: none; }
-  .nav a { text-decoration: none; color: var(--muted); font-size: 14.5px; transition: color .15s ease; }
-  .nav a:hover { color: var(--ink); }
-
-  .hero { padding: 110px 0 90px; }
-  .hero h1 {
-    font-size: clamp(34px, 6vw, 52px);
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    font-weight: 700;
+  h1 {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    font-weight: 750;
   }
-  .hero p.tagline {
-    margin-top: 22px;
-    font-size: 19px;
+  .handle { color: var(--accent); font-size: 15px; margin-top: 4px; font-weight: 550; }
+  .tagline {
     color: var(--muted);
-    max-width: 520px;
+    font-size: 16.5px;
+    margin: 16px auto 0;
+    max-width: 460px;
   }
-  .hero .cta { margin-top: 36px; display: flex; gap: 14px; }
-  .btn {
-    display: inline-block;
-    padding: 11px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 550;
-    transition: opacity .15s ease, background .15s ease;
-  }
-  .btn.primary { background: var(--ink); color: #fff; }
-  .btn.primary:hover { opacity: .85; }
-  .btn.ghost { border: 1px solid var(--line); color: var(--ink); }
-  .btn.ghost:hover { background: #f2f2f0; }
 
-  section { padding: 70px 0; border-top: 1px solid var(--line); }
-  .kicker {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    font-weight: 650;
-    margin-bottom: 18px;
-  }
-  h2 { font-size: 26px; letter-spacing: -0.02em; margin-bottom: 18px; }
-  .about p { color: #3a3d42; margin-bottom: 16px; max-width: 600px; }
-
-  .projects { display: grid; gap: 18px; margin-top: 8px; }
-  .project {
+  .links { padding: 8px 0 20px; display: grid; gap: 13px; }
+  .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 24px 26px;
-    background: #fff;
-    transition: border-color .15s ease, transform .15s ease;
-  }
-  .project:hover { border-color: #c9c9c5; transform: translateY(-2px); }
-  .project h3 { font-size: 17px; margin-bottom: 6px; letter-spacing: -0.01em; }
-  .project p { color: var(--muted); font-size: 15px; }
-  .project a { color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 550; }
-  .project a:hover { text-decoration: underline; }
-  .project .link-row { margin-top: 12px; }
-
-  .contact p { color: #3a3d42; max-width: 560px; margin-bottom: 26px; }
-  .contact .email {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--ink);
+    border-radius: 14px;
+    padding: 17px 22px;
     text-decoration: none;
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 2px;
+    color: var(--ink);
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform .14s ease, border-color .14s ease, background .14s ease;
   }
-  .socials { margin-top: 30px; display: flex; gap: 22px; }
-  .socials a { color: var(--muted); text-decoration: none; font-size: 15px; }
-  .socials a:hover { color: var(--ink); }
+  .link-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: #1a1e1c;
+  }
+  .link-btn .sub { display: block; color: var(--muted); font-size: 13px; font-weight: 450; margin-top: 2px; }
+  .link-btn .arrow { color: var(--accent); font-size: 18px; }
+
+  section.about { padding: 44px 0 20px; border-top: 1px solid var(--line); margin-top: 28px; }
+  .kicker {
+    font-size: 12.5px; text-transform: uppercase; letter-spacing: .14em;
+    color: var(--accent); font-weight: 700; margin-bottom: 14px;
+  }
+  .about h2 { font-size: 22px; letter-spacing: -0.01em; margin-bottom: 14px; }
+  .about p { color: #c6ccc9; font-size: 15.5px; margin-bottom: 14px; }
 
   footer {
-    padding: 40px 0 60px;
+    padding: 36px 0 56px;
     border-top: 1px solid var(--line);
+    margin-top: 36px;
     color: var(--muted);
-    font-size: 13.5px;
+    font-size: 13px;
+    text-align: center;
   }
+  footer a { color: var(--muted); }
 
-  @media (max-width: 560px) {
-    .nav ul { gap: 18px; }
-    .hero { padding: 80px 0 60px; }
+  @media (max-width: 480px) {
+    .hero { padding: 48px 0 32px; }
+    h1 { font-size: 27px; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#">Chase Grant</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</header>
+<main class="wrap">
 
-<main>
-  <div class="wrap hero">
+  <header class="hero">
+    <img class="avatar" src="/chase-grant.jpg" alt="Chase Grant, lawn care business owner and founder of Grow Landscaping" onerror="this.style.display='none'">
     <h1>Chase Grant</h1>
-    <p class="tagline">I build things, grow businesses, and enjoy the work. This is my corner of the internet.</p>
-    <div class="cta">
-      <a class="btn primary" href="#work">See my work</a>
-      <a class="btn ghost" href="#contact">Get in touch</a>
-    </div>
-  </div>
+    <div class="handle">@thechasegrant</div>
+    <p class="tagline">Lawn care business owner building <strong>Grow Landscaping</strong> into a top&nbsp;100 landscaping company in the world — documenting every step so you can grow yours too.</p>
+  </header>
 
-  <section id="about">
-    <div class="wrap about">
-      <div class="kicker">About</div>
-      <h2>A little background</h2>
-      <p>I'm Chase — an entrepreneur and builder. I spend my time creating projects, growing ideas into real businesses, and learning by doing.</p>
-      <p>Away from work, you'll usually find me outside or planning the next thing.</p>
-    </div>
+  <nav class="links" aria-label="Chase Grant's links">
+    <a class="link-btn" href="https://www.youtube.com/@chasegrant" rel="me">
+      <span>YouTube<span class="sub">The ins and outs of growing a lawn care business</span></span>
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a class="link-btn" href="https://www.instagram.com/thechasegrant" rel="me">
+      <span>Instagram<span class="sub">Daily life &amp; behind the scenes</span></span>
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a class="link-btn" href="https://x.com/thechasegrant" rel="me">
+      <span>X / Twitter<span class="sub">Thoughts on business &amp; growth</span></span>
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a class="link-btn" href="https://growlandscapingservices.com/" rel="me">
+      <span>Grow Landscaping<span class="sub">My lawn care &amp; landscape company — Trinity, FL</span></span>
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a class="link-btn" href="https://www.google.com/maps?q=Grow+Landscaping,+8477+Houndstooth+Enclave+Dr,+Trinity,+FL+34655">
+      <span>Find us on Google Maps<span class="sub">Grow Landscaping &middot; Trinity, Florida</span></span>
+      <span class="arrow">&rarr;</span>
+    </a>
+  </nav>
+
+  <section class="about" id="about">
+    <div class="kicker">About</div>
+    <h2>Who is Chase Grant?</h2>
+    <p>Chase Grant is a lawn care business owner, landscaping entrepreneur, and content creator based in Trinity, Florida. He's the founder of <a href="https://growlandscapingservices.com/" style="color:var(--accent)">Grow Landscaping</a>, a lawn care and landscape company he's building with one goal: breaking into the top 100 landscaping companies in the world.</p>
+    <p>Along the way, Chase documents the entire process — the wins, the mistakes, the numbers, and the systems — to help other owners and operators grow their own lawn care and landscaping businesses. From route density and pricing to hiring crews and scaling recurring revenue, he shows the ins and outs that most companies keep behind closed doors.</p>
   </section>
 
-  <section id="work">
-    <div class="wrap">
-      <div class="kicker">Work</div>
-      <h2>Selected projects</h2>
-      <div class="projects">
-        <div class="project">
-          <h3>Project One</h3>
-          <p>A short description of what this project is, who it's for, and what makes it interesting.</p>
-          <div class="link-row"><a href="#">View project &rarr;</a></div>
-        </div>
-        <div class="project">
-          <h3>Project Two</h3>
-          <p>A short description of what this project is, who it's for, and what makes it interesting.</p>
-          <div class="link-row"><a href="#">View project &rarr;</a></div>
-        </div>
-        <div class="project">
-          <h3>Project Three</h3>
-          <p>A short description of what this project is, who it's for, and what makes it interesting.</p>
-          <div class="link-row"><a href="#">View project &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <footer>
+    &copy; <span id="yr"></span> Chase Grant &middot; Trinity, FL<br>
+    Founder of <a href="https://growlandscapingservices.com/">Grow Landscaping</a>
+  </footer>
 
-  <section id="contact">
-    <div class="wrap contact">
-      <div class="kicker">Contact</div>
-      <h2>Say hello</h2>
-      <p>The best way to reach me is email. I read everything.</p>
-      <a class="email" href="mailto:hello@chasegrant.com">hello@chasegrant.com</a>
-      <div class="socials">
-        <a href="#" rel="me">X / Twitter</a>
-        <a href="#" rel="me">LinkedIn</a>
-        <a href="#" rel="me">Instagram</a>
-      </div>
-    </div>
-  </section>
 </main>
-
-<footer>
-  <div class="wrap">&copy; <span id="yr"></span> Chase Grant</div>
-</footer>
 
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 
